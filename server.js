@@ -73,7 +73,7 @@ config({ path: "./database/config.env" });
     server.use(express.json());
     server.use(cookieParser());
     server.use(cors({
-      origin:[process.env.FRONTENDURL],
+      origin:[process.env.FRONTEND_URL],
       methods:["GET","POST","DELETE"],
       credentials:true
     }))
