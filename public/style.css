@@ -1,0 +1,163 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+ 
+}
+
+
+
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffffb4;
+  
+
+
+}
+
+
+
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+    background: #FFF;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.10);   
+    color: black;
+
+
+
+}
+
+input {
+
+    padding: 1rem 1.2rem;
+    border-radius: 0.5rem;
+   border: 1px solid #CCC;
+   background: #FFF;
+
+}
+
+form h2 {
+
+    
+    color: black;
+
+}
+
+form button{
+
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(180deg, #021BFF 0%, #0111A3 100%);
+    color: white;
+    border: none;
+    filter: drop-shadow(0px 4px 10px rgba(2, 24, 216, 0.50));
+
+
+
+
+}
+
+
+a {
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    text-align: center;
+
+}
+
+a span {
+     
+    color: #0216CC;
+}
+
+a:hover{
+
+    border-bottom: 1px solid black;
+}
+
+
+
+/* container */
+
+.container {
+
+ 
+    display: flex;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.10);
+   
+
+    
+
+
+
+}
+
+
+#forget {
+
+    border-radius: 1rem;
+}
+
+#change {
+    border-radius: 1rem;
+
+}
+
+#bg {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+
+}
+
+#flex-1 {
+
+    flex: 1;
+
+}
+
+#flex-2{
+    flex: 2;
+}
+
+
+.circle {
+
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+}
+
+#password-reset{
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+
+}

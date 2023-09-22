@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+
+      <div id="flex-2">
+              <img src="/img/bg.png" alt="bg" id="bg">
+      </div>
+      <form method="post" action="/user/register" id="flex-1">
+        <h2>Sign up</h2>
+        <p>Create your account in seconds</p>
+        <input type="text" placeholder="Name" name="name" id="name" required />
+        <input
+          type="text"
+          placeholder="Email"
+          name="email"
+          id="email"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Password"
+          name="password"
+          id="password"
+          required
+        />
+         <p>I agree the Terms and conditions</p>
+        <button type="submit">SignUp</button>
+        <a href="signin">Already have an account? <span>Sign In</span></a>
+      </form>
+    </div>
+  </body>
+</html>

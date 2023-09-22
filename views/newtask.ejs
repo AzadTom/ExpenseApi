@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Create</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+
+      
+      <form method="post" action="/task/new" id="flex-1">
+        <h2>Task</h2>
+        <p>Create your task in seconds</p>
+        <input type="text" placeholder="Title" name="title" id="name" required />
+        <input
+          type="text"
+          placeholder="Description"
+          name="description"
+          id="email"
+          required
+        />
+        
+        
+        <button type="submit">Create Task</button>
+        
+      </form>
+    </div>
+  </body>
+</html>
