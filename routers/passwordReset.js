@@ -66,7 +66,7 @@ passwordRouter.post("/password-reset",async(req,res)=>{
 
                 await token.deleteOne()
 
-                res.status(200).render("passwordreset")
+                res.status(200).json({success:true,message:"password reset successfully!"})
 
             } catch (error) {
                 
