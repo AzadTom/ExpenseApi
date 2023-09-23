@@ -5,7 +5,7 @@ import { ErrorHandler } from "../middlewares/error.js";
 
 export const getProfile = (req, res) => {
 
-  res.status(200).json({ success: true, currentuser: req.current });
+  res.status(200).json({ currentuser: req.current });
 
 };
 
@@ -55,7 +55,7 @@ export const loginUser = async (req, res,next) => {
       maxAge: 15*60*1000,
       sameSite: process.env.NODE_ENV === "Developement"? "lax":"none",
       secure: process.env.NODE_ENV === "Developement"? false : true
-  }).json({success:true,message:"user login successfully!"})
+  }).json({founduser:user,token})
 
   } catch (error) {
     next(error)
@@ -89,7 +89,7 @@ export const registerUser = async (req, res,next) => {
       maxAge: 15*60*1000,
       sameSite: process.env.NODE_ENV === "Developement"? "lax":"none",
       secure: process.env.NODE_ENV === "Developement"? false : true
-  }).json({success:true,message:"user register successfully!"})
+  }).json({createduser:register,token})
     
    } catch (error) {
 
