@@ -7,24 +7,7 @@ import  bcryptjs from "bcryptjs"
 
 const passwordRouter = express.Router( )
 
-passwordRouter.get("/password-reset/:userId/:tokon",async(req,res)=>{
 
-
-    const {userId, tokon} = req.params;
-
-    res.status(200).cookie("comfirmuser",{ 
-        userId:userId,
-        tokon:tokon
-    },{
-        httpOnly:true,
-        maxAge: 15*60*1000,
-        sameSite: process.env.NODE_ENV === "Developement"? "lax":"none",
-        secure: process.env.NODE_ENV === "Developement"? false : true
-    })
-    .render("changepassword");
-
-
-})
 
 
 passwordRouter.post("/password-reset",async(req,res)=>{
@@ -36,10 +19,10 @@ passwordRouter.post("/password-reset",async(req,res)=>{
 
             try {
                 
-                const {comfirmuser} = req.cookies
+            
 
 
-                const user = await usermodel.findById(comfirmuser.userId)
+                const user = await usermodel.findById(req.body.userId)
 
                 if(!user)
                 {
@@ -48,7 +31,7 @@ passwordRouter.post("/password-reset",async(req,res)=>{
 
                 const token  = await tokenmodel.findOne({
                     userId: user._id,
-                    token:comfirmuser.tokon
+                    token:req.body.tokon
                 })
 
 
@@ -104,16 +87,9 @@ passwordRouter.post("/",async(req,res)=>{
 
         }
 
-        res.status(200).redirect(`password/password-reset/${user._id}/${token.token}`)
 
-
-    
-
-
-
-
-
-
+         res.status(200).json({userid:user._id ,tokon:token.token})
+       
         
     } catch (error) {
 
