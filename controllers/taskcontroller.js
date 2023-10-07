@@ -41,11 +41,12 @@ export const newTask = async(req,res,next)=>{
 
   try {
     
-    const {title,description,type,amount} = req.body
+    const {title,description,type,amount} = req.body;
 
     await taskmodel.create({
             title,
             description,
+            type,
             amount,
             user : req.current._id,
 
